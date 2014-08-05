@@ -1,0 +1,12 @@
+C:\Users\Bruno\Documents\GitHub\MusicTagManager\MusicTagManager\bin\Debug\MusicTagManager.exe.config
+C:\Users\Bruno\Documents\GitHub\MusicTagManager\MusicTagManager\bin\Debug\MusicTagManager.exe
+C:\Users\Bruno\Documents\GitHub\MusicTagManager\MusicTagManager\bin\Debug\MusicTagManager.pdb
+C:\Users\Bruno\Documents\GitHub\MusicTagManager\MusicTagManager\bin\Debug\policy.2.0.taglib-sharp.dll
+C:\Users\Bruno\Documents\GitHub\MusicTagManager\MusicTagManager\bin\Debug\taglib-sharp.dll
+C:\Users\Bruno\Documents\GitHub\MusicTagManager\MusicTagManager\bin\Debug\policy.2.0.taglib-sharp.config
+C:\Users\Bruno\Documents\GitHub\MusicTagManager\MusicTagManager\obj\Debug\MusicTagManager.Properties.Resources.resources
+C:\Users\Bruno\Documents\GitHub\MusicTagManager\MusicTagManager\obj\Debug\MusicTagManager.csproj.GenerateResource.Cache
+C:\Users\Bruno\Documents\GitHub\MusicTagManager\MusicTagManager\obj\Debug\MusicTagManager.exe
+C:\Users\Bruno\Documents\GitHub\MusicTagManager\MusicTagManager\obj\Debug\MusicTagManager.pdb
+C:\Users\Bruno\Documents\GitHub\MusicTagManager\MusicTagManager\obj\Debug\MusicTagManager.Main.resources
+C:\Users\Bruno\Documents\GitHub\MusicTagManager\MusicTagManager\obj\Debug\MusicTagManager.csprojResolveAssemblyReference.cache
