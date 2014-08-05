@@ -102,5 +102,13 @@ namespace MusicTagManager.Business
                 item.Tag.Year = year;
             }
         }
+
+        public void ChangeTitleTagToFileName()
+        {
+            foreach (var item in Files)
+            {
+                item.Tag.Title = Path.GetFileNameWithoutExtension(item.Name);
+            }
+        }
     }
 }

@@ -34,6 +34,11 @@
             this.btnPath = new System.Windows.Forms.Button();
             this.dgvFiles = new System.Windows.Forms.DataGridView();
             this.gbxTag = new System.Windows.Forms.GroupBox();
+            this.chkChangeCover = new System.Windows.Forms.CheckBox();
+            this.chkChangeAlbumYear = new System.Windows.Forms.CheckBox();
+            this.chkChangeAlbumTittle = new System.Windows.Forms.CheckBox();
+            this.chkChangeContribArtist = new System.Windows.Forms.CheckBox();
+            this.chkChangeArtist = new System.Windows.Forms.CheckBox();
             this.lblTip = new System.Windows.Forms.Label();
             this.txtContribArtist = new System.Windows.Forms.TextBox();
             this.lblContributingArtist = new System.Windows.Forms.Label();
@@ -49,11 +54,7 @@
             this.btnApply = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.fdgPicture = new System.Windows.Forms.OpenFileDialog();
-            this.chkChangeArtist = new System.Windows.Forms.CheckBox();
-            this.chkChangeContribArtist = new System.Windows.Forms.CheckBox();
-            this.chkChangeAlbumTittle = new System.Windows.Forms.CheckBox();
-            this.chkChangeAlbumYear = new System.Windows.Forms.CheckBox();
-            this.chkChangeCover = new System.Windows.Forms.CheckBox();
+            this.chkChangeTittle = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFiles)).BeginInit();
             this.gbxTag.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCover)).BeginInit();
@@ -95,6 +96,7 @@
             this.gbxTag.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbxTag.Controls.Add(this.chkChangeTittle);
             this.gbxTag.Controls.Add(this.chkChangeCover);
             this.gbxTag.Controls.Add(this.chkChangeAlbumYear);
             this.gbxTag.Controls.Add(this.chkChangeAlbumTittle);
@@ -119,11 +121,70 @@
             this.gbxTag.TabStop = false;
             this.gbxTag.Text = "Tags";
             // 
+            // chkChangeCover
+            // 
+            this.chkChangeCover.AutoSize = true;
+            this.chkChangeCover.Checked = true;
+            this.chkChangeCover.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkChangeCover.Location = new System.Drawing.Point(90, 146);
+            this.chkChangeCover.Name = "chkChangeCover";
+            this.chkChangeCover.Size = new System.Drawing.Size(15, 14);
+            this.chkChangeCover.TabIndex = 16;
+            this.chkChangeCover.UseVisualStyleBackColor = true;
+            // 
+            // chkChangeAlbumYear
+            // 
+            this.chkChangeAlbumYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkChangeAlbumYear.AutoSize = true;
+            this.chkChangeAlbumYear.Checked = true;
+            this.chkChangeAlbumYear.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkChangeAlbumYear.Location = new System.Drawing.Point(221, 108);
+            this.chkChangeAlbumYear.Name = "chkChangeAlbumYear";
+            this.chkChangeAlbumYear.Size = new System.Drawing.Size(15, 14);
+            this.chkChangeAlbumYear.TabIndex = 15;
+            this.chkChangeAlbumYear.UseVisualStyleBackColor = true;
+            // 
+            // chkChangeAlbumTittle
+            // 
+            this.chkChangeAlbumTittle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkChangeAlbumTittle.AutoSize = true;
+            this.chkChangeAlbumTittle.Checked = true;
+            this.chkChangeAlbumTittle.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkChangeAlbumTittle.Location = new System.Drawing.Point(221, 83);
+            this.chkChangeAlbumTittle.Name = "chkChangeAlbumTittle";
+            this.chkChangeAlbumTittle.Size = new System.Drawing.Size(15, 14);
+            this.chkChangeAlbumTittle.TabIndex = 14;
+            this.chkChangeAlbumTittle.UseVisualStyleBackColor = true;
+            // 
+            // chkChangeContribArtist
+            // 
+            this.chkChangeContribArtist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkChangeContribArtist.AutoSize = true;
+            this.chkChangeContribArtist.Checked = true;
+            this.chkChangeContribArtist.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkChangeContribArtist.Location = new System.Drawing.Point(221, 57);
+            this.chkChangeContribArtist.Name = "chkChangeContribArtist";
+            this.chkChangeContribArtist.Size = new System.Drawing.Size(15, 14);
+            this.chkChangeContribArtist.TabIndex = 13;
+            this.chkChangeContribArtist.UseVisualStyleBackColor = true;
+            // 
+            // chkChangeArtist
+            // 
+            this.chkChangeArtist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkChangeArtist.AutoSize = true;
+            this.chkChangeArtist.Checked = true;
+            this.chkChangeArtist.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkChangeArtist.Location = new System.Drawing.Point(221, 31);
+            this.chkChangeArtist.Name = "chkChangeArtist";
+            this.chkChangeArtist.Size = new System.Drawing.Size(15, 14);
+            this.chkChangeArtist.TabIndex = 12;
+            this.chkChangeArtist.UseVisualStyleBackColor = true;
+            // 
             // lblTip
             // 
             this.lblTip.AutoSize = true;
             this.lblTip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lblTip.Location = new System.Drawing.Point(17, 443);
+            this.lblTip.Location = new System.Drawing.Point(16, 540);
             this.lblTip.Name = "lblTip";
             this.lblTip.Size = new System.Drawing.Size(198, 13);
             this.lblTip.TabIndex = 11;
@@ -252,64 +313,15 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // chkChangeArtist
+            // chkChangeTittle
             // 
-            this.chkChangeArtist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkChangeArtist.AutoSize = true;
-            this.chkChangeArtist.Checked = true;
-            this.chkChangeArtist.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkChangeArtist.Location = new System.Drawing.Point(221, 31);
-            this.chkChangeArtist.Name = "chkChangeArtist";
-            this.chkChangeArtist.Size = new System.Drawing.Size(15, 14);
-            this.chkChangeArtist.TabIndex = 12;
-            this.chkChangeArtist.UseVisualStyleBackColor = true;
-            // 
-            // chkChangeContribArtist
-            // 
-            this.chkChangeContribArtist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkChangeContribArtist.AutoSize = true;
-            this.chkChangeContribArtist.Checked = true;
-            this.chkChangeContribArtist.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkChangeContribArtist.Location = new System.Drawing.Point(221, 57);
-            this.chkChangeContribArtist.Name = "chkChangeContribArtist";
-            this.chkChangeContribArtist.Size = new System.Drawing.Size(15, 14);
-            this.chkChangeContribArtist.TabIndex = 13;
-            this.chkChangeContribArtist.UseVisualStyleBackColor = true;
-            // 
-            // chkChangeAlbumTittle
-            // 
-            this.chkChangeAlbumTittle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkChangeAlbumTittle.AutoSize = true;
-            this.chkChangeAlbumTittle.Checked = true;
-            this.chkChangeAlbumTittle.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkChangeAlbumTittle.Location = new System.Drawing.Point(221, 83);
-            this.chkChangeAlbumTittle.Name = "chkChangeAlbumTittle";
-            this.chkChangeAlbumTittle.Size = new System.Drawing.Size(15, 14);
-            this.chkChangeAlbumTittle.TabIndex = 14;
-            this.chkChangeAlbumTittle.UseVisualStyleBackColor = true;
-            // 
-            // chkChangeAlbumYear
-            // 
-            this.chkChangeAlbumYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkChangeAlbumYear.AutoSize = true;
-            this.chkChangeAlbumYear.Checked = true;
-            this.chkChangeAlbumYear.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkChangeAlbumYear.Location = new System.Drawing.Point(221, 108);
-            this.chkChangeAlbumYear.Name = "chkChangeAlbumYear";
-            this.chkChangeAlbumYear.Size = new System.Drawing.Size(15, 14);
-            this.chkChangeAlbumYear.TabIndex = 15;
-            this.chkChangeAlbumYear.UseVisualStyleBackColor = true;
-            // 
-            // chkChangeCover
-            // 
-            this.chkChangeCover.AutoSize = true;
-            this.chkChangeCover.Checked = true;
-            this.chkChangeCover.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkChangeCover.Location = new System.Drawing.Point(90, 146);
-            this.chkChangeCover.Name = "chkChangeCover";
-            this.chkChangeCover.Size = new System.Drawing.Size(15, 14);
-            this.chkChangeCover.TabIndex = 16;
-            this.chkChangeCover.UseVisualStyleBackColor = true;
+            this.chkChangeTittle.AutoSize = true;
+            this.chkChangeTittle.Location = new System.Drawing.Point(19, 435);
+            this.chkChangeTittle.Name = "chkChangeTittle";
+            this.chkChangeTittle.Size = new System.Drawing.Size(164, 17);
+            this.chkChangeTittle.TabIndex = 17;
+            this.chkChangeTittle.Text = "Change tittle TAG to filename";
+            this.chkChangeTittle.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -363,6 +375,7 @@
         private System.Windows.Forms.CheckBox chkChangeContribArtist;
         private System.Windows.Forms.CheckBox chkChangeArtist;
         private System.Windows.Forms.CheckBox chkChangeCover;
+        private System.Windows.Forms.CheckBox chkChangeTittle;
     }
 }
 

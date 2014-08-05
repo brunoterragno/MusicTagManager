@@ -79,10 +79,13 @@ namespace MusicTagManager
                 if (chkChangeCover.Checked)
                     _management.ChangeAlbumCover();
 
+                if (chkChangeTittle.Checked)
+                    _management.ChangeTitleTagToFileName();
+
                 _management.SaveChanges();
 
                 if (chkChangeFilename.Checked)
-                    _management.ChangeFileNameToTitleTag();
+                    _management.ChangeFileNameToTitleTag();               
 
                 MessageBox.Show("Done!");
 
