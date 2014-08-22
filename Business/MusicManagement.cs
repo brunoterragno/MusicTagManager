@@ -4,6 +4,9 @@ using MusicTagManager.Extensions;
 using MusicTagManager.Helper;
 using System.Drawing;
 using System;
+using System.Linq;
+using System.Linq.Expressions;
+using System.ComponentModel;
 
 namespace MusicTagManager.Business
 {
@@ -11,11 +14,11 @@ namespace MusicTagManager.Business
     {
         string _path;
         public TagLib.IPicture Cover { get; set; }
-        public List<TagLib.File> Files { get; set; }
+        public BindingList<TagLib.File> Files { get; set; }
 
         public MusicManagement()
         {
-            Files = new List<TagLib.File>();
+            Files = new BindingList<TagLib.File>();
         }
 
         public MusicManagement(string path)
@@ -36,7 +39,7 @@ namespace MusicTagManager.Business
         public void FillList()
         {
             ClearList();
-            Files = FileHelper.MusicFilesFromDirectory(_path);
+            Files = new BindingList<TagLib.File>(FileHelper.MusicFilesFromDirectory(_path));
         }
 
         public void ClearList()
@@ -65,7 +68,7 @@ namespace MusicTagManager.Business
 
         public void SaveChanges()
         {
-            Files.ForEach(x => x.Save());
+            Files.ToList().ForEach(x => x.Save());
         }
 
         public void ChangeAlbumArtist(string[] artists)

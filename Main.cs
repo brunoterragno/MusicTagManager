@@ -3,6 +3,7 @@ using MusicTagManager.Helper;
 using MusicTagManager.Model;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -12,7 +13,6 @@ namespace MusicTagManager
     public partial class Main : Form
     {
         MusicManagement _management;
-        //TagLib.IPicture _cover;
 
         public Main()
         {
@@ -57,7 +57,7 @@ namespace MusicTagManager
             try
             {
                 Cursor = Cursors.WaitCursor;
-               
+
                 if (chkChangeArtist.Checked)
                 {
                     var albumArtists = txtArtist.Text.Split(',');
@@ -85,7 +85,7 @@ namespace MusicTagManager
                 _management.SaveChanges();
 
                 if (chkChangeFilename.Checked)
-                    _management.ChangeFileNameToTitleTag();               
+                    _management.ChangeFileNameToTitleTag();
 
                 MessageBox.Show("Done!");
 
@@ -106,7 +106,7 @@ namespace MusicTagManager
             if (Directory.Exists(txtPath.Text))
             {
                 _management = new MusicManagement(txtPath.Text);
-                var musicFiles = _management.Files.Select(x => new Music(x)).ToList();
+                var musicFiles = new BindingList<Music>(_management.Files.Select(x => new Music(x)).ToList());
                 dgvFiles.DataSource = musicFiles;
 
                 //load individual tags
@@ -127,6 +127,19 @@ namespace MusicTagManager
                 {
                     var firstImageExtracted = ImageHelper.ExtractImage(_management.Cover);
                     picCover.Image = firstImageExtracted.GetThumbnailImage(picCover.Width, picCover.Height, null, new IntPtr());
+                }
+            }
+        }
+
+        private void dgvFiles_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Delete))
+            {
+                foreach (DataGridViewRow item in dgvFiles.SelectedRows)
+                {
+                    dgvFiles.Rows.Remove(item);
+                    var musicFiles = dgvFiles.DataSource as BindingList<Music>;
+                    _management.Files = new BindingList<TagLib.File>(musicFiles.Select(x => x.File).ToArray());
                 }
             }
         }

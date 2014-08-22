@@ -34,6 +34,7 @@
             this.btnPath = new System.Windows.Forms.Button();
             this.dgvFiles = new System.Windows.Forms.DataGridView();
             this.gbxTag = new System.Windows.Forms.GroupBox();
+            this.chkChangeTittle = new System.Windows.Forms.CheckBox();
             this.chkChangeCover = new System.Windows.Forms.CheckBox();
             this.chkChangeAlbumYear = new System.Windows.Forms.CheckBox();
             this.chkChangeAlbumTittle = new System.Windows.Forms.CheckBox();
@@ -54,7 +55,6 @@
             this.btnApply = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.fdgPicture = new System.Windows.Forms.OpenFileDialog();
-            this.chkChangeTittle = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFiles)).BeginInit();
             this.gbxTag.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCover)).BeginInit();
@@ -86,10 +86,12 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvFiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvFiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFiles.Location = new System.Drawing.Point(12, 39);
+            this.dgvFiles.Location = new System.Drawing.Point(4, 39);
             this.dgvFiles.Name = "dgvFiles";
+            this.dgvFiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFiles.Size = new System.Drawing.Size(451, 537);
             this.dgvFiles.TabIndex = 8;
+            this.dgvFiles.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvFiles_KeyDown);
             // 
             // gbxTag
             // 
@@ -120,6 +122,16 @@
             this.gbxTag.TabIndex = 3;
             this.gbxTag.TabStop = false;
             this.gbxTag.Text = "Tags";
+            // 
+            // chkChangeTittle
+            // 
+            this.chkChangeTittle.AutoSize = true;
+            this.chkChangeTittle.Location = new System.Drawing.Point(19, 435);
+            this.chkChangeTittle.Name = "chkChangeTittle";
+            this.chkChangeTittle.Size = new System.Drawing.Size(164, 17);
+            this.chkChangeTittle.TabIndex = 17;
+            this.chkChangeTittle.Text = "Change tittle TAG to filename";
+            this.chkChangeTittle.UseVisualStyleBackColor = true;
             // 
             // chkChangeCover
             // 
@@ -312,16 +324,6 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // chkChangeTittle
-            // 
-            this.chkChangeTittle.AutoSize = true;
-            this.chkChangeTittle.Location = new System.Drawing.Point(19, 435);
-            this.chkChangeTittle.Name = "chkChangeTittle";
-            this.chkChangeTittle.Size = new System.Drawing.Size(164, 17);
-            this.chkChangeTittle.TabIndex = 17;
-            this.chkChangeTittle.Text = "Change tittle TAG to filename";
-            this.chkChangeTittle.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
